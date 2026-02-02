@@ -1,0 +1,133 @@
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+
+* {
+    box-sizing: border-box;    
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontálne centrovanie */
+    align-items: center; /* Vertikálne centrovanie */
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    gap: 0.5rem; /* Medzera medzi kartou a pätkou */
+    background-color: var(--Grey900);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Vertikálne centrovanie */
+    width: calc(100% - 3rem);
+    max-width: 384px; /* Na mobile nech sa rozťahuje podľa calc */
+    /* Poistka: ak by calc zlyhal, karta neklesne pod túto šírku */
+    min-width: 327px; /* Poistka: ak by calc zlyhal, karta neklesne pod túto šírku */
+    margin: 0 auto; /* Toto kartu vycentruje vodorovne */
+    padding: 1.5rem 1.5rem;
+    background-color: var(--Grey800);
+    border-radius: 0.75rem; /* Zaoblenie  */
+    /* Tento zápis vytvorí ten efekt vrstvenia */
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.3);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontálne centrovanie */
+    align-items: center; /* Vertikálne centrovanie */
+}
+
+img {
+    border-radius: 50%;
+    width: 5.5rem; /* Fixná šírka avataru */
+    height: 5.5rem;
+    object-fit: cover;    /* Zabezpečí, že sa obrázok pri zmene pomeru nezdeformuje */
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem; 
+    padding-top: 1.7rem;
+    color: var(--White);
+    font-weight: 600;
+    margin: 0;
+}
+
+.place {
+    font-size: 0.85rem;
+    padding-top: 0.65rem;
+    margin: 0;
+    color: var(--Green);
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+}
+
+.position {
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 400;
+    color: var(--White);
+    padding-top: 1.75rem;   
+    letter-spacing: 0.01rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    width: 100%; /* Aby tlačidlá vyplnili šírku karty */
+    gap: 1rem; /* Pridá rovnomerné medzery medzi tlačidlá */
+    align-items: stretch; /* Vertikálne centrovanie */
+    align-self: stretch; 
+    padding: 1.675rem 0 0 0;
+}
+
+.social-links li {
+    text-align: center;
+    background-color: var(--Grey700);
+    width: 100%; /* Aby tlačidlá vyplnili šírku karty */
+    gap: 1rem;
+    border-radius: 0.5rem;
+}
+
+.social-links a {
+    display: block;/*aby sa dali klikať po celej šírke*/
+    text-decoration: none;
+    width: 100%;
+    font-size: 0.875rem;
+    padding: 0.875rem;
+    color: var(--White);
+    font-weight: 700;
+    letter-spacing: 0.005rem;
+    transition: background-color 0.3s, color 0.3s; /* Voliteľné: spraví zmenu farby plynulou */
+}
+
+.social-links li:hover {
+    background-color: var(--Green); 
+}
+
+.social-links li:hover a {
+    color: var(--Grey900);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Desktop Styles (Larger screens (min-width: 376px)) */
+@media (min-width: 24rem)  /* Ak je displej širší ako mobil */ {
+    .card {
+        width: 100%;
+        max-width: 24rem; /*Ak karta zaberá presne 4 stĺpce, jej šírka v CSS by mala byť: (4×72)+(3×32)=384px*/        
+    } 
+}
