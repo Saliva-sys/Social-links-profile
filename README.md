@@ -47,9 +47,10 @@ The goal was to build a responsive social links profile card that matches the de
 
 ### What I learned
 
-During this project, I focused on fine-tuning the responsiveness using the `calc()` function and `media queries`. I learned how to adjust typography and spacing precisely to achieve a "Pixel Perfect" result across different screen sizes.
+During this project, I focused on fine-tuning the responsiveness using relative units (rem) and Media Queries. I learned how to adjust typography and spacing precisely to achieve a professional result that scales smoothly across different screen sizes. By using max-width combined with percentage-based widths, I ensured the layout remains flexible on mobile while staying contained on desktop.
 
 Example of my desktop adjustment:
+
 ```css
 @media (min-width: 48rem) {
     .card {
@@ -71,7 +72,7 @@ In future projects, I want to focus on:
 
 ### Useful resources
 
-- [W3Schools - CSS clamp() Function](https://www.w3schools.com/cssref/func_clamp.php) - This was my go-to guide for understanding how to create fluid layouts without using too many media queries.
+- [W3Schools](https://www.w3schools.com/) - This was my go-to guide for understanding how to create fluid layouts.
 - [Google Fonts](https://fonts.google.com/) - Used for the Inter font family as per the design requirements.
 
 ## Author
