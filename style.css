@@ -125,9 +125,39 @@ h1 {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 /* Desktop Styles (Larger screens (min-width: 376px)) */
-@media (min-width: 24rem)  /* Ak je displej širší ako mobil */ {
+@media (min-width: 48rem)  /* 48rem = 768px (tablety a desktopy) */ {
     .card {
-        width: 100%;
-        max-width: 24rem; /*Ak karta zaberá presne 4 stĺpce, jej šírka v CSS by mala byť: (4×72)+(3×32)=384px*/        
+        width: 21.75rem; 
+        padding: 2.25rem 2.25rem;
     } 
+
+    h1 {
+        font-size: 1.35rem; 
+        padding-top: 1.55rem;
+    }
+
+    .place {
+        font-size: 0.76rem;
+        padding-top: 0.55rem;
+    }
+
+    .position {
+        font-size: 0.77rem;
+        padding-top: 1.6rem;
+    }
+
+    img {
+        width: 5rem; /* Fixná šírka avataru */
+        height: 5rem;    
+    }
+
+    .social-links {
+        padding: 1.52rem 0 0 0;
+        gap: 0.9rem; /* Pridá rovnomerné medzery medzi tlačidlá */
+    }
+
+    .social-links a {
+        padding: 0.8rem;    /* Trochu užšie tlačidlá pôsobia na desktope elegantnejšie */
+        font-size: 0.8rem;   /* Prispôsobenie veľkosti písma k ostatným textom */
+    }
 }
