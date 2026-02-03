@@ -123,7 +123,7 @@ h1 {
     text-align: center; 
 }
 
-.attribution a { 
+.attribution-link { 
     color: var(--Blue); 
 }
 
@@ -167,7 +167,7 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    transition: none !important;
-    animation: none !important;
+    transition: none;
+    animation: none;
   }
 }
